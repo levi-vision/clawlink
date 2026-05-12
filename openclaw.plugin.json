@@ -1,0 +1,96 @@
+{
+  "id": "clawlink",
+  "name": "Clawlink",
+  "description": "Nostr-first encrypted communication between OpenClaw nodes.",
+  "version": "0.1.0",
+  "channels": ["clawlink"],
+  "contracts": {
+    "tools": [
+      "clawlink_list_peers",
+      "clawlink_send_message",
+      "clawlink_request_task",
+      "clawlink_reply_task",
+      "clawlink_get_task_status"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "nodeName": { "type": "string" },
+      "nostrPrivateKey": { "type": "string" },
+      "relays": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "trustedPeers": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "peerPolicies": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "canMessage": { "type": "boolean" },
+            "canRequestTask": { "type": "boolean" },
+            "canSendFiles": { "type": "boolean" },
+            "autoAcceptTaskTypes": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "requireApprovalForAllTasks": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  },
+  "channelConfigs": {
+    "clawlink": {
+      "label": "Clawlink",
+      "description": "OpenClaw-to-OpenClaw encrypted channel over Nostr.",
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "nodeName": { "type": "string" },
+          "nostrPrivateKey": { "type": "string" },
+          "relays": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "trustedPeers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "peerPolicies": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "uiHints": {
+        "nodeName": {
+          "label": "Node name",
+          "placeholder": "My OpenClaw"
+        },
+        "nostrPrivateKey": {
+          "label": "Nostr private key",
+          "sensitive": true,
+          "placeholder": "nsec1..."
+        },
+        "relays": {
+          "label": "Relay URLs",
+          "help": "Use 1-3 trusted relays for production."
+        }
+      }
+    }
+  },
+  "uiHints": {
+    "nostrPrivateKey": {
+      "label": "Nostr private key",
+      "sensitive": true
+    }
+  }
+}

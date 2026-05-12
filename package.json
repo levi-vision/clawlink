@@ -1,0 +1,38 @@
+{
+  "name": "clawlink",
+  "version": "0.1.0",
+  "description": "Encrypted OpenClaw-to-OpenClaw communication over Nostr.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "nostr-tools": "^2.23.3",
+    "openclaw": "^2026.5.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "setupEntry": "./dist/setup-entry.js",
+    "channel": {
+      "id": "clawlink",
+      "label": "Clawlink",
+      "blurb": "Secure OpenClaw-to-OpenClaw communication over Nostr relays."
+    }
+  }
+}
