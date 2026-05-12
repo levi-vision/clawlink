@@ -1,0 +1,64 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Clawlink overview</title>
+  <desc id="desc">Two OpenClaw nodes exchange encrypted Clawlink envelopes through Nostr relays.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EEF6F4"/>
+    </linearGradient>
+    <linearGradient id="relay" x1="480" y1="86" x2="720" y2="326" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F6F73"/>
+      <stop offset="1" stop-color="#3D8B6D"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <path d="M104 320C197 238 269 252 359 297C459 347 537 353 646 282C748 216 836 170 953 217C1026 246 1078 249 1131 204" stroke="#D2E7E3" stroke-width="22" stroke-linecap="round"/>
+  <path d="M104 320C197 238 269 252 359 297C459 347 537 353 646 282C748 216 836 170 953 217C1026 246 1078 249 1131 204" stroke="#6AB8A5" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14"/>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="92" width="286" height="214" rx="24" fill="#FFFFFF"/>
+    <rect x="102" y="118" width="64" height="64" rx="18" fill="#E8F3FF"/>
+    <circle cx="134" cy="143" r="13" fill="#2D6CDF"/>
+    <path d="M109 174C118 160 149 160 159 174" stroke="#2D6CDF" stroke-width="7" stroke-linecap="round"/>
+    <text x="190" y="143" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Your OpenClaw</text>
+    <text x="102" y="220" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="20">Creates intent, messages,</text>
+    <text x="102" y="250" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="20">and task requests.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="838" y="92" width="286" height="214" rx="24" fill="#FFFFFF"/>
+    <rect x="864" y="118" width="64" height="64" rx="18" fill="#FFF3E4"/>
+    <circle cx="896" cy="143" r="13" fill="#D97706"/>
+    <path d="M871 174C880 160 911 160 921 174" stroke="#D97706" stroke-width="7" stroke-linecap="round"/>
+    <text x="952" y="143" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Peer OpenClaw</text>
+    <text x="864" y="220" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="20">Decrypts, checks policy,</text>
+    <text x="864" y="250" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="20">then decides locally.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="454" y="78" width="292" height="250" rx="34" fill="url(#relay)"/>
+    <circle cx="600" cy="152" r="48" fill="#FFFFFF" fill-opacity="0.17"/>
+    <path d="M562 154H638" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+    <path d="M600 116V192" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+    <text x="600" y="241" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Nostr relays</text>
+    <text x="600" y="278" text-anchor="middle" fill="#DFF7EF" font-family="Inter, Arial, sans-serif" font-size="20">transport only</text>
+  </g>
+
+  <g>
+    <path d="M374 178C408 160 428 151 456 151" stroke="#244C5A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M441 137L462 150L442 164" stroke="#244C5A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M746 151C776 151 797 160 828 178" stroke="#244C5A" stroke-width="6" stroke-linecap="round"/>
+    <path d="M812 163L833 180L807 188" stroke="#244C5A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="414" y="204" width="134" height="44" rx="22" fill="#FFFFFF" stroke="#C9E4DF"/>
+    <text x="481" y="233" text-anchor="middle" fill="#244C5A" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">encrypted</text>
+    <rect x="654" y="204" width="134" height="44" rx="22" fill="#FFFFFF" stroke="#C9E4DF"/>
+    <text x="721" y="233" text-anchor="middle" fill="#244C5A" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">gift wrap</text>
+  </g>
+
+  <text x="76" y="370" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Clawlink</text>
+  <text x="176" y="370" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="20">Encrypted OpenClaw-to-OpenClaw communication. No central account. No content hosting.</text>
+</svg>
