@@ -52,13 +52,27 @@ Clawlink 的边界很简单：**送密文，管连接；权限永远留在本地
 
 ## 安装
 
+推荐直接从 GitHub 安装：
+
+```sh
+openclaw plugins install git:github.com/levi-vision/clawlink
+openclaw gateway restart
+openclaw plugins inspect clawlink --runtime --json
+```
+
+如果要固定分支、标签或 commit：
+
+```sh
+openclaw plugins install git:github.com/levi-vision/clawlink@main
+```
+
+本地开发时可以用 link 模式：
+
 ```sh
 pnpm install
 pnpm build
 pnpm exec openclaw plugins install --link .
 ```
-
-安装后重启 OpenClaw gateway。
 
 ## 配置
 
