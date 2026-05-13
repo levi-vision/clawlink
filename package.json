@@ -1,6 +1,6 @@
 {
   "name": "clawlink",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encrypted OpenClaw-to-OpenClaw communication over Nostr.",
   "type": "module",
   "main": "./dist/index.js",

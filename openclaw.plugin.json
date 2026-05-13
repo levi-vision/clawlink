@@ -2,7 +2,7 @@
   "id": "clawlink",
   "name": "Clawlink",
   "description": "Nostr-first encrypted communication between OpenClaw nodes.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "channels": ["clawlink"],
   "contracts": {
     "tools": [
@@ -12,6 +12,23 @@
       "clawlink_reply_task",
       "clawlink_get_task_status"
     ]
+  },
+  "toolMetadata": {
+    "clawlink_list_peers": {
+      "optional": true
+    },
+    "clawlink_send_message": {
+      "optional": true
+    },
+    "clawlink_request_task": {
+      "optional": true
+    },
+    "clawlink_reply_task": {
+      "optional": true
+    },
+    "clawlink_get_task_status": {
+      "optional": true
+    }
   },
   "configSchema": {
     "type": "object",

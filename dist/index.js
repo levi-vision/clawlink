@@ -15,6 +15,10 @@ const entry = defineChannelPluginEntry({
     plugin: clawlinkChannelPlugin,
     registerFull(api) {
         registerClawlinkTools(api, taskStore);
+        // Tool discovery needs descriptors only; the relay client belongs to full runtime.
+        if (api.registrationMode !== "full") {
+            return;
+        }
         api.registerService({
             id: `${PLUGIN_ID}-relay-client`,
             start(ctx) {
